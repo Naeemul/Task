@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BDT to USD</title>
+	<style type="text/css">
+		.converter{
+			background-color: ;
+			padding: 200px;
+		}
+	</style>
+</head>
+<body>
+
+<div class="converter" align="center">
+	<h2>BDT to USD Converter</h2>
+	<label for="taka">BTD :</label>
+	<input type="number" name="taka" id="taka">
+	<br><br>
+	<label for="usd">USD :</label>
+	<input type="number" name="usd" id="usd">
+<div>
+	<script>
+		document.getElementById("taka").addEventListener("keyup", function(){
+			var takaValue = document.getElementById("taka").value;
+			document.getElementById("usd").value = takaValue/102.5;
+		})
+		document.getElementById("usd").addEventListener("keyup", function(){
+			var takaValue = document.getElementById("usd").value;
+			document.getElementById("taka").value = takaValue*102.5;
+		})
+	</script>
+
+</body>
+</html>
